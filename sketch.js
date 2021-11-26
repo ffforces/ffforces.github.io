@@ -92,12 +92,12 @@ let z=1;
 let q=1;
 let h=1;
 let aika;
-
+let aika2;
 
 function setup() {
 
 createCanvas(displayWidth, displayHeight);
-frameRate(30);
+frameRate(1);
 
 //fullScreen();
 //Helvetica = loadFont("Asul-Regular.ttf");
@@ -110,10 +110,10 @@ function draw() {
 
 
 z=z+1;
-aika=millis()*0.01;
+aika=millis()*0.001;
 aika=aika%800;
-
-
+let aika2=millis()*0.001;
+aika2=aika2%(width*0.2);
 // //////////////////////////////////////////////////////////////////////////////
 
 //teksti01
@@ -124,37 +124,136 @@ aika=aika%800;
 //let word = random(message1); // select random word
 //text(word, x+200, random(200)); // draw the word
 
-
+//teksti1-1
 if(aika>137 && aika<138){
-
-
-//textFont(Helvetica, 30);
 fill(52, 106, 121);
 x = random(width/3);
 let word = random(message1); // select random word
 text(word, x+(width*0.02), random(height*0.1)); // draw the word
 }
 
+//teksti2-1
+if(aika>140 && aika<142){
+fill(52, 106, 121);
+x = random(width/3);
+let word4 = random(message2); // select random word
+text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
+}
 
-if(aika>166 && aika<168){
+//teksti3-1
+if(aika>150 && aika<152){
+fill(52, 106, 121);
+x = random(width/3);
+let word5 = random(message3); // select random word
+text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
+}
 
 
-//textFont(Helvetica, 30);
+//teksti4-1
+if(aika>160 && aika<162){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message4); // select random word
+text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
+}
+
+//teksti5-1
+if(aika>170 && aika<172){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message5); // select random word
+text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
+}
+
+///////////////////////////////////
+
+//teksti1-2
+if(aika>180 && aika<182){
 fill(52, 106, 121);
 x = random(width/3);
 let word = random(message1); // select random word
 text(word, x+(width*0.02), random(height*0.1)); // draw the word
 }
 
-if(aika>196 && aika<198){
+//teksti2-2
+if(aika>190 && aika<192){
+fill(52, 106, 121);
+x = random(width/3);
+let word4 = random(message2); // select random word
+text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
+}
+
+//teksti3-2
+if(aika>200 && aika<202){
+fill(52, 106, 121);
+x = random(width/3);
+let word5 = random(message3); // select random word
+text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
+}
+
+//teksti4-2
+if(aika>210 && aika<212){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message4); // select random word
+text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
+}
+
+//teksti5-2
+if(aika>220 && aika<222){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message5); // select random word
+text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
+}
 
 
-//textFont(Helvetica, 30);
+//////////////////////////////
+
+//teksti1-3
+if(aika>230 && aika<232){
 fill(52, 106, 121);
 x = random(width/3);
 let word = random(message1); // select random word
 text(word, x+(width*0.02), random(height*0.1)); // draw the word
 }
+
+//teksti2-3
+if(aika>240 && aika<242){
+fill(52, 106, 121);
+x = random(width/3);
+let word4 = random(message2); // select random word
+text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
+}
+
+//teksti3-3
+if(aika>253 && aika<256){
+fill(52, 106, 121);
+x = random(width/3);
+let word5 = random(message3); // select random word
+text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
+}
+
+//teksti4-3
+if(aika>363 && aika<365){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message4); // select random word
+text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
+}
+
+
+//teksti5-3
+if(aika>420 && aika<425){
+fill(52, 106, 121);
+x = random(width/3);
+let word6 = random(message5); // select random word
+text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
+}
+
+
+
+
 
 
 
@@ -162,29 +261,11 @@ text(word, x+(width*0.02), random(height*0.1)); // draw the word
 
 //teksti02
 
-if(aika>220 && aika<225){
-fill(52, 106, 121);
-x = random(width/3);
-let word4 = random(message2); // select random word
-text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
-}
 
 
 
-if(aika>245 && aika<248){
-fill(52, 106, 121);
-x = random(width/3);
-let word4 = random(message2); // select random word
-text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
-}
 
 
-if(aika>255 && aika<258){
-fill(52, 106, 121);
-x = random(width/3);
-let word4 = random(message2); // select random word
-text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
-}
 
 
 
@@ -194,27 +275,11 @@ text(word4, x+(width*0.7), (height*0.8)-random(height*0.1));
 
 //teksti03
 
-if(aika>300 && aika<305){
-fill(52, 106, 121);
-x = random(width/3);
-let word5 = random(message3); // select random word
-text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
-}
-
-if(aika>323 && aika<326){
-fill(52, 106, 121);
-x = random(width/3);
-let word5 = random(message3); // select random word
-text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
-}
 
 
-if(aika>343 && aika<346){
-fill(52, 106, 121);
-x = random(width/3);
-let word5 = random(message3); // select random word
-text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
-}
+
+
+
 
 
 
@@ -224,28 +289,12 @@ text(word5, x+(width*0.7), random(height*0.05)+height*0.05);
 //teksti04
 
 
-if(aika>310 && aika<315){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message4); // select random word
-text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
-}
 
 
-if(aika>320 && aika<325){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message4); // select random word
-text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
-}
 
 
-if(aika>332 && aika<335){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message4); // select random word
-text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
-}
+
+
 
 
 ////////////////////////////////////////////////////////////
@@ -253,27 +302,8 @@ text(word6, x+(width*0.01), (height*0.8)+random(height*0.05));
 //teksti05
 
 
-if(aika>370 && aika<385){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message5); // select random word
-text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
-}
-
-if(aika>400 && aika<405){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message5); // select random word
-text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
-}
 
 
-if(aika>420 && aika<425){
-fill(52, 106, 121);
-x = random(width/3);
-let word6 = random(message5); // select random word
-text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
-}
 
 
 
@@ -287,14 +317,14 @@ text(word6, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
 
 
 
-if(z>1800){
+if(aika>799 && aika<801){
 
 fill(255,255,255);
 rect(0, 0, width, height);
-if(z>1802){
-z=0;
+//if(z>1802){
+//z=0;
 
-}
+//}
 }
 
 ////////////////////////////////////////////////////////////
@@ -307,7 +337,10 @@ e = random(width*0.4);
 
 let word2 = random(message18);
 fill(52, 106, 121);
-text(word2,(width/2.3)-(random(width*0.2)-random(width*0.2)),random(height*0.2)-random(height*0.2)+height/2);
+text(word2,(width/2.3)+random(aika2),height/2+random(aika2));
+//text(word2,(width/2.3)-(random(width*0.2)-random(width*0.2)),random(height*0.2)-random(height*0.2)+height/2);
+
+
 //float z = textWidth(message[int(random(26))]);
 //index = (index + 1) % message.length;
 
@@ -319,8 +352,9 @@ e = random(width*0.4);
 
 let word3 = random(message18);
 
-fill(255,255,255);
-text(word3,(width/2.3)-(random(width*0.2)-random(width*0.2)),random(height*0.2)-random(height*0.2)+height/2);
+fill(255, 235, 252);
+text(word2,(width/2.3)+random(aika2),height/2+random(aika2));
+//text(word3,(width/2.3)-(random(width*0.2)-random(width*0.2)),random(height*0.2)-random(height*0.2)+height/2);
 //float z = textWidth(message[int(random(26))]);
 //index = (index + 1) % message.length;
 }
