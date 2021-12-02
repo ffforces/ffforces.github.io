@@ -971,7 +971,7 @@ rect(width*0.25, height*0.25, width*0.5, height*0.5);
 
 
 
-if(aika>799 && aika<801){
+if(aika>795 && aika<801){
 
 fill(255,255,255);
 rect(0, 0, width, height);
