@@ -581,7 +581,7 @@ function draw() {
 
 
 z=z+1;
-aika=(millis()*0.005);
+aika=(millis()*0.001);
 aika=aika%800;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
