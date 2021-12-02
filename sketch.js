@@ -82,7 +82,7 @@ function draw() {
 
 
 let aika;
-aika=millis()*0.1;
+aika=millis()*0.01;
 aika=aika%100;
 //a=random(2);
 fill(255,255,255);
