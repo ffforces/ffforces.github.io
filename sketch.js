@@ -235,9 +235,7 @@ frameRate(1);
 
 // teksti arrayt
 let word = random(message1);
-let word4 = random(message2); // select random word
-let word5 = random(message3); // select random word
-let word6 = random(message4); // select random word
+
 
 //teksti01
 
