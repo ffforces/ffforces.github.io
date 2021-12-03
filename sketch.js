@@ -714,8 +714,8 @@ background(255,255,255);
 function draw() {
 
 // laskurit
-aika=(millis()*0.001);
-aika=aika%1200;
+aika=(millis()*0.0025);
+aika=aika%1240;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
 
@@ -1265,7 +1265,7 @@ rect(width*0.25, height*0.25, width*0.5, height*0.5);
 
 
 
-if(aika>1198 && aika<1201){
+if(aika>1198 && aika<1240){
 
 fill(255,255,255);
 rect(0, 0, width, height);
