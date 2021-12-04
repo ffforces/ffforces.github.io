@@ -707,7 +707,7 @@ if(aika>890 && aika<1200){
 //if(z>1802){
 //z=0;
 fill(0, 0, 0);
-textSize(width/120);
+textSize(width/220);
 let word14 = random(message19); // select random word
 text(word14, random(width), random(height));
 //}
