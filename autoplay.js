@@ -1,4 +1,4 @@
-
+var audio = document.getElementById("audio")
 function start() {
           if (audio.readyState) {
                 document.getElementById("audio").play();
