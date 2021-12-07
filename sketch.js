@@ -483,7 +483,7 @@ text(word, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
 
 //teksti1-3
 if(aika>555 && aika<560){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.02), random(height*0.1)); // draw the word
@@ -491,7 +491,7 @@ text(word, x+(width*0.02), random(height*0.1)); // draw the word
 
 //teksti2-3
 if(aika>570 && aika<575){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.7), (height*0.8)-random(height*0.1));
@@ -499,7 +499,7 @@ text(word, x+(width*0.7), (height*0.8)-random(height*0.1));
 
 //teksti3-3
 if(aika>585 && aika<595){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.7), random(height*0.05)+height*0.05);
@@ -507,7 +507,7 @@ text(word, x+(width*0.7), random(height*0.05)+height*0.05);
 
 //teksti4-3
 if(aika>605 && aika<615){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.01), (height*0.8)+random(height*0.05));
@@ -516,7 +516,7 @@ text(word, x+(width*0.01), (height*0.8)+random(height*0.05));
 
 //teksti5-3
 if(aika>625 && aika<635){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
@@ -616,7 +616,7 @@ text(word, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
 
 //teksti1-3
 if(aika>795 && aika<805){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.02), random(height*0.1)); // draw the word
@@ -624,7 +624,7 @@ text(word, x+(width*0.02), random(height*0.1)); // draw the word
 
 //teksti2-3
 if(aika>815 && aika<820){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.7), (height*0.8)-random(height*0.1));
@@ -632,7 +632,7 @@ text(word, x+(width*0.7), (height*0.8)-random(height*0.1));
 
 //teksti3-3
 if(aika>835 && aika<840){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.7), random(height*0.05)+height*0.05);
@@ -640,7 +640,7 @@ text(word, x+(width*0.7), random(height*0.05)+height*0.05);
 
 //teksti4-3
 if(aika>850 && aika<855){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.01), (height*0.8)+random(height*0.05));
@@ -649,7 +649,7 @@ text(word, x+(width*0.01), (height*0.8)+random(height*0.05));
 
 //teksti5-3
 if(aika>865 && aika<870){
-fill(0, 0, 0);
+fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
 text(word, x+(width*0.5)-(width*0.1), random(height*0.1)+height*0.05);
@@ -715,7 +715,7 @@ if(aika>890 && aika<1200){
 
 //if(z>1802){
 //z=0;
-fill(255, 235, 252);
+fill(0, 0, 0);
 textSize(width/220);
 let word14 = random(message19); // select random word
 text(word14, random(width), random(height));
