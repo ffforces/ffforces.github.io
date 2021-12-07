@@ -26,7 +26,7 @@ let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "sydän laskee kaikkia päiviä, ei riitä kaikkiin päiviin",
 
 "tulen koko ajan nuoremmaksi",
-"arka antura, pulssi joka käy kaikissa paikoissa.",
+"arka antura, pulssi joka käy kaikissa paikoissa",
 "olet paikka johon osutaan"]
 
 let message18=["minuun iskeytyy ääntä pintoja",
