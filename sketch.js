@@ -201,7 +201,7 @@ createCanvas(displayWidth, displayHeight);
 
 
 
-textFont('Verdana');
+textFont('Open Sans');
 //song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded)
   //song.play();
 
