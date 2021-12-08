@@ -187,44 +187,50 @@ let aika3;
 //function setup() {
   //fill('#ED225D');
 
+var song;
+var gameStarted=false;
 
-
+function preLoad(){
+  //soundFormats('ogg', 'mp3');
+//song = loadSound('keskenkaikistapaikoista', loaded);
+ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
+}
 
 
 function setup() {
 
-createCanvas(displayWidth, displayHeight);
-
-
-
-
-
-
-
+createCanvas(windowWidth, windowHeight);
+//ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
+button = createButton("Aloita");
+button.position(displayWidth/2, displayHeight/2);
+    button.mousePressed(() => gameStarted = true);
+  //  button.mousePressed(() => audioOn);
+//button.mousePressed(audioOn);
 textFont('Open Sans');
 //song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded)
   //song.play();
 
 
-//fullScreen();
-//Helvetica = loadFont("Asul-Regular.ttf");
-//Helvetica=  createFont("Asul-Regular", 45);
-//Helvetica = loadFont("CordiaUPC-48.vlw");
+
 background(255,255,255);
 }
 
-function audio(){
- var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-  }
+function loaded(){
+  if (gameStarted=true){
+  ele.autoplay(true);
+//    button.hide();
+
+
 }
 
-function draw() {
+}
 
+
+
+function draw() {
+if (gameStarted){
+  //ele.autoplay(true);
+  button.hide();
 // laskurit
 aika=(millis()*0.0025);
 aika=aika%1240;
@@ -648,7 +654,7 @@ text(word, x+(width*0.01), (height*0.8)+random(height*0.05));
 
 
 //teksti5-3
-if(aika>865 && aika<870){
+if(aika>865 && aika<867){
 fill(255, 235, 252);
 x = random(width/3);
 textSize(width/120);
@@ -747,5 +753,6 @@ rect(0, 0, width, height);
 //z=0;
 
 //}
+}
 }
 }
