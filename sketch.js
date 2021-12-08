@@ -192,8 +192,8 @@ var gameStarted=false;
 
 function preLoad(){
   //soundFormats('ogg', 'mp3');
-//song = loadSound('keskenkaikistapaikoista', loaded);
-ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
+song = loadSound('keskenkaikistapaikoista', loaded);
+//ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
 }
 
 
@@ -217,7 +217,8 @@ background(255,255,255);
 
 function loaded(){
   if (gameStarted=true){
-  ele.autoplay(true);
+  //ele.autoplay(true);
+   song.play();
 //    button.hide();
 
 
