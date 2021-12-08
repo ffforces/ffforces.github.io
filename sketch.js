@@ -190,9 +190,9 @@ let aika3;
 var song;
 var gameStarted=false;
 
-function preLoad(){
+function preload(){
   //soundFormats('ogg', 'mp3');
-song = loadSound('keskenkaikistapaikoista', loaded);
+song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded);
 //ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
 }
 
