@@ -187,18 +187,11 @@ let aika3;
 //function setup() {
   //fill('#ED225D');
 
-var song;
-var gameStarted=false;
-
 
 function setup() {
-song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded);
+
 createCanvas(windowWidth, windowHeight);
-//ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
-button = createButton("Aloita");
-button.position(displayWidth/2, displayHeight/2);
-    button.mousePressed(() => gameStarted = true);
-  //  button.mousePressed(() => audioOn);
+
 //button.mousePressed(audioOn);
 textFont('Open Sans');
 //song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded)
@@ -209,23 +202,14 @@ textFont('Open Sans');
 background(255,255,255);
 }
 
-function loaded(){
-  if (gameStarted=true){
-  //ele.autoplay(true);
-   song.play();
-//    button.hide();
 
-
-}
-
-}
 
 
 
 function draw() {
-if (gameStarted){
+
   //ele.autoplay(true);
-  button.hide();
+
 // laskurit
 aika=(millis()*0.0025);
 aika=aika%1240;
@@ -750,4 +734,4 @@ rect(0, 0, width, height);
 //}
 }
 }
-}
+
