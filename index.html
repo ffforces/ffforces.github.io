@@ -29,7 +29,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
 
   </head>
   <body>
-
+<button id="button" onclick="start()">CLICK ME!!!</button>
 
 <script>
 
@@ -763,9 +763,13 @@ function start(){
    started = true;
    loop();
 }  
-
+document.querySelector("button").addEventListener("click", function () {
+  started = !started;
+   // insert code to make audio play
+  document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
+})
     </script>
-<button id="somebutton" onclick="start()">CLICK ME!!!</button>
+
     
 
 
