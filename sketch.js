@@ -178,7 +178,7 @@ let aika;
 let aika2;
 let ele;
 let aika3;
-
+var started;
 //let myFont;
 //function preload() {
   //myFont = loadFont('assets/inconsolata.otf');
@@ -188,12 +188,22 @@ let aika3;
   //fill('#ED225D');
 
 
+
+
+
 function setup() {
 
-
-var myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.parent("container");
+  var myCanvas = createCanvas(windowWidth, windowHeight);
+    myCanvas.parent("container");
+//ele = createAudio('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg');
+//button = createButton("Aloita");
+//button.position(displayWidth/2, displayHeight/2);
+  //  button.mousePressed(() => gameStarted = true);
+  //  button.mousePressed(() => audioOn);
 //button.mousePressed(audioOn);
+
+
+
 textFont('Open Sans');
 //song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded)
   //song.play();
@@ -208,9 +218,7 @@ background(255,255,255);
 
 
 function draw() {
-
-  //ele.autoplay(true);
-
+if(started){
 // laskurit
 aika=(millis()*0.0025);
 aika=aika%1240;
@@ -735,4 +743,9 @@ rect(0, 0, width, height);
 //}
 }
 }
+}
 
+//Start or Stop the animation
+document.querySelector("button").addEventListener("click", function () {
+  started = !started;
+})
