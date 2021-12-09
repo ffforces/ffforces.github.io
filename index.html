@@ -766,18 +766,11 @@ function start(){
     loop();
 if(started) {
             document.getElementById('button').style.visibility = 'hidden';
+    document.getElementById("audio").play();
         } else {
             document.getElementById('button').style.visibility = 'visible';
         }
-  if (audio.readyState) {
-                document.getElementById("audio").play();
-          } else {
-                 audio.oncanplay = function () {
-
-               document.getElementById("audio").play();
-               };
-          }
-}  
+  }  
 
     </script>
 
