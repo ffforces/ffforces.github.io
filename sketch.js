@@ -190,8 +190,9 @@ let aika3;
 
 function setup() {
 
-createCanvas(windowWidth, windowHeight);
 
+var myCanvas = createCanvas(windowWidth, windowHeight);
+  myCanvas.parent("container");
 //button.mousePressed(audioOn);
 textFont('Open Sans');
 //song = loadSound('https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg', loaded)
