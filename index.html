@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+    <meta charset="utf-8">
+    <title>Milka Luhtaniemi & Joonas Siren: Kesken kaikista paikoista </title>
+        <meta name="description"
+        content="Kesken kaikista paikoista
+Kineettinen runo on koostettu niin, että algoritmi ryhmittää tekstimateriaalia erilaisiin kokonaisuuksiin. Runon keskiössä on sydän, jonka voi ajatella olevan fysiologinen algoritmi: rytmittävä elin, joka lähettää keholle impulsseja, käskyjä ja komentoja. Teosta voi katsoa solullisena prosessina, hajoamisena ja muuntumien verkostona. Runon nimi viittaa ajatukseen, ettei sydämellä tai koodillakaan ole alkua, loppua tai etenemistä: se on ja sen on oltava olla kesken.
+
+Runot: Milka Luhtaniemi
+
+Koodit: Joonas Siren
+
+Konsepti: Milka Luhtaniemi ja Joonas Siren
+
+Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio Toinen laji oli Forum Box- galleriassa heinäkuussa 2021">
+
+    <meta name="keywords"
+        content="Milka Luhtaniemi, milka luhtaniemi, Joonas Siren, joonas siren, algoritminen runous, algoritmi, runous, kineettinen runous, nokturno, Nokturno, nykyrunous, ohjelmointi, digitaalinen runous, kokeellinen runous, digital poetry, experimental poetry">
+    <meta name="author" content="Milka Luhtaniemi & Joonas Siren">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-      <script src="p5.sound.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
+
   </head>
   <body>
-    
-    <script src="sketch.js"></script>
-      <audio autoplay="true" loop src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg">
- </audio>
+  <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
+<div class="go clickable link" id="start" onclick="start()">PLAY!</div>
+<script>
+var firstLaunch = true;
+var audio = document.getElementById("audio");
 
+  var script = document.createElement('script');
+
+ function start(){
+
+script.onload = function () {
+    //do stuff with the script
+};
+script.src = "sketch.js";
+document.head.appendChild(script); //or something of the likes
+  if (firstLaunch) {
+                firstLaunch = false;
+                if (audio.readyState) {
+                    document.getElementById("audio").play();
+                } else {
+                    audio.oncanplay = function () {
+                        document.getElementById("audio").play();
+                    };
+                }
+            }
+
+
+ }
+
+    </script>
   </body>
 </html>
