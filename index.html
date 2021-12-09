@@ -29,11 +29,11 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
 
   </head>
   <body>
-
+  <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  <div align="center"> <button id="button" onclick="start()">Aloita</button></div>
 <script>
 
-
+var audio = document.getElementById("audio");
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
 "minuun iskeytyy ääntä, pintoja",
@@ -769,7 +769,14 @@ if(started) {
         } else {
             document.getElementById('button').style.visibility = 'visible';
         }
+  if (audio.readyState) {
+                document.getElementById("audio").play();
+          } else {
+                 audio.oncanplay = function () {
 
+               document.getElementById("audio").play();
+               };
+          }
 }  
 
     </script>
