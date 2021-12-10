@@ -801,27 +801,32 @@ rect(0, 0, width, height);
 
 }
 
-
-
-function start(){
-  var audio = document.getElementById("audio");
+function listener(){
+  
 var container1 = document.getElementById("container");
 var button = document.getElementById("button");
 var center1 = document.getElementById("center");
-   started = true;
-    loop();
-  document.querySelector("button").addEventListener("click", function () {
+ document.querySelector("button").addEventListener("click", function () {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
   document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
   document.querySelector("center1").parentNode.removeChild(document.querySelector("center1"));
   document.querySelector("container1").parentNode.removeChild(document.querySelector("container1"));
         });                                                  
-  //else {
-    //        document.getElementById('button').style.visibility = 'visible';
-      //  }
+
   }
   
+  
+
+function start(){
+  var audio = document.getElementById("audio");
+   started = true;
+    loop();
+if(started){
+           //document.getElementById('button').style.display= 'none';
+    document.getElementById("audio").play();
+  }
+}
   
     </script>
 
