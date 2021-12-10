@@ -6,10 +6,15 @@
     <title>Milka Luhtaniemi & Joonas Siren: Kesken kaikista paikoista </title>
         <meta name="description"
         content="Kesken kaikista paikoista
+
 Kineettinen runo on koostettu niin, että algoritmi ryhmittää runofragmentteja erilaisiin kokonaisuuksiin. Runon keskiössä on sydän, jonka voi ajatella olevan fysiologinen algoritmi: rytmittävä elin, joka lähettää keholle impulsseja, käskyjä ja komentoja. Teosta voi katsoa prosessina, hajoamisena ja muuntumien verkostona. Runon nimi viittaa ajatukseen, ettei sydämellä tai koodillakaan ole alkua, loppua tai etenemistä, vaan se on ja sen on oltava kesken.
+
 Runot: Milka Luhtaniemi
+
 Koodit ja äänisuunnittelu: Joonas Siren
+
 Konsepti: Milka Luhtaniemi ja Joonas Siren
+
 Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio Toinen laji oli Forum Box- galleriassa heinäkuussa 2021. ">
 
     <meta name="keywords"
@@ -19,48 +24,28 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 
-
-
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-   <style>
-     .body{
-  margin:0px 0px;
-   padding:0px 0px;
-    border:none white;
-     }
-      .canvas{
-  margin:0px 0px;
-   padding:0px 0px;
-    border:none white;
-     display:block;   
-     }
-    .html{
-margin:0px 0px;
-   padding:0px 0px;
-   border:none white;
-     } 
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0px;
+      display:block;
+    }
+    canvas {
+    display:block;
+    border:0px;
+    }
 
-     
-.text{
-margin:0px 0px;
-   padding:0px 0px;
-    border:none;
-     }
-    
-</style>
+    </style>
+
   </head>
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
- 
-    <div align="center"> 
-    <button id="button" onclick="start()">Aloita</button>
-    </div>
-    
-    <div class="text">
+ <div align="center"> <button id="button" onclick="start()">Aloita</button></div>
 <script>
 
- var audio = document.getElementById("audio");
-
+var audio = document.getElementById("audio");
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
 "minuun iskeytyy ääntä, pintoja",
@@ -246,7 +231,7 @@ var started;
 
 function setup() {
 
- createCanvas(displayWidth, displayHeight);
+ createCanvas(windowWidth, windowHeight);
 
 textFont('PT Serif');
 
@@ -262,7 +247,6 @@ function draw() {
 if(started){
 // laskurit
 aika=(millis()*0.0025);
- // aika=(millis()*0.01);
 aika=aika%1240;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
@@ -738,9 +722,12 @@ text(word2,(width/2.5),height/2.5+(random(aika2)-random(aika2)));
 if(aika>870 && aika<890){
 
 fill(255,255,255);
-noStroke();  
+  noStroke();
 rect(0, 0, width, height);
+//if(z>1802){
+//z=0;
 
+//}
 }
 
 if(aika>890 && aika<1200){
@@ -798,10 +785,10 @@ if(started) {
             document.getElementById('button').style.visibility = 'visible';
         }
   }
-  
+
     </script>
 
-  </div>
+
 
 
   </body>
