@@ -130,7 +130,7 @@ if (aika >100){
 text(word8, width*0.2, height*0.3); // draw the word
 
 
-if (word8 == "yö"){
+if (word8 === "yö"){
   text(word9, width*0.5, height*0.3); // draw the word
   }
 }
