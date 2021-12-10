@@ -809,7 +809,8 @@ function start(){
    started = true;
     loop();
 if(started) {
-            document.getElementById('button').style.visibility = 'hidden';
+            //document.getElementById('button').style.visibility = 'hidden';
+  document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
     document.getElementById("audio").play();
         } else {
             document.getElementById('button').style.visibility = 'visible';
