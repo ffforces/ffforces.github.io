@@ -36,8 +36,9 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
     display:block;
     border:none;
     padding:0px;
-    margin:0;
+    margin:0px;
     }
+    button {text-align: center;}  
   
 
 
@@ -46,7 +47,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
   </head>
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
-  <button align="center" id="button" onclick="start()">Aloita</button>
+  <button id="button" onclick="start()">Aloita</button>
 <script>
 
 var audio = document.getElementById("audio");
