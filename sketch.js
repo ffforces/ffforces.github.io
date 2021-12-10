@@ -73,7 +73,7 @@ let message7 = ["yö",
 function setup() {
 
 createCanvas(displayWidth, displayHeight);
-frameRate(0.1);
+frameRate(1);
 textSize(displayWidth/70);
 //fullScreen();
 //Helvetica = loadFont("Asul-Regular.ttf");
