@@ -809,13 +809,13 @@ rect(0, 0, width, height);
 function start(){
    started = true;
     loop();
-if(started) {
+  document.querySelector("button1").addEventListener("click", function () {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
   document.querySelector("button1").parentNode.removeChild(document.querySelector("button1"));
   document.querySelector("center1").parentNode.removeChild(document.querySelector("center1"));
   document.querySelector("container1").parentNode.removeChild(document.querySelector("container1"));
-        } 
+        });                                                  
   //else {
     //        document.getElementById('button').style.visibility = 'visible';
       //  }
