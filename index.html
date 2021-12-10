@@ -817,10 +817,10 @@ function start(){
 if(started) {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
+  document.querySelector('#button').addEventListener('click', function (e) {
+  console.log(this.parentNode.classList.remove('container'&&'center'))
+});
 
- center1.parentNode.removeChild(center1);
- container1.parentNode.removeChild(container1);
- button1.parentNode.removeChild(button1);
         } 
   //else {
     //        document.getElementById('button').style.visibility = 'visible';
