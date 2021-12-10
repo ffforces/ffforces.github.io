@@ -72,10 +72,7 @@ margin:0px 0px;
     <div class="text">
 <script>
 
-var audio = document.getElementById("audio");
-var container1 = document.getElementById("container");
-//var button = document.getElementById("button");
-var center1 = document.getElementById("center");
+
 
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
@@ -807,6 +804,10 @@ rect(0, 0, width, height);
 
 
 function start(){
+  var audio = document.getElementById("audio");
+var container1 = document.getElementById("container");
+var button = document.getElementById("button");
+var center1 = document.getElementById("center");
    started = true;
     loop();
   document.querySelector("button").addEventListener("click", function () {
