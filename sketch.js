@@ -118,9 +118,7 @@ text(word5, width*0.2, height*0.3); // draw the word
 
 if (word5 === "päivä"){
 text(word6, width*0.5, height*0.3); // draw the word
-}
-
-if (word6 === "yö"){
+} else{
    text(word7, width*0.5, height*0.3); // draw the word
   }
 }
