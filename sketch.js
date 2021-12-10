@@ -96,46 +96,46 @@ fill(0, 0, 0);
 
 if (aika <50){
 
-let word = random(message1); // select random word
-text(word, width*0.2, height*0.3); // draw the word
+let word1 = random(message1); // select random word
+text(word1, width*0.2, height*0.3); // draw the word
 
-if (word == "päivä"){
-let word2 = random(message2); // select random word
-text(word2, width*0.5, height*0.3); // draw the word
+if (word1 === "päivä"){
+let word3 = random(message2); // select random word
+text(word3, width*0.5, height*0.3); // draw the word
 }
 
-if (word == "yö"){
-  let word2 = random(message3); // select random word
-  text(word2, width*0.5, height*0.3); // draw the word
+if (word1  === "yö"){
+  let word4 = random(message3); // select random word
+  text(word4, width*0.5, height*0.3); // draw the word
   }
 }
 
-if (aika >50){
+if (aika >50 && aika <100){
 
-let word = random(message4); // select random word
-text(word, width*0.2, height*0.3); // draw the word
+let word5 = random(message4); // select random word
+text(word5, width*0.2, height*0.3); // draw the word
 
-if (word == "päivä"){
-let word2 = random(message5); // select random word
-text(word2, width*0.5, height*0.3); // draw the word
+if (word5 === "päivä"){
+let word6 = random(message5); // select random word
+text(word6, width*0.5, height*0.3); // draw the word
 }
 
-if (word == "yö"){
-  let word2 = random(message6); // select random word
-  text(word2, width*0.5, height*0.3); // draw the word
+if (word6 === "yö"){
+  let word7 = random(message6); // select random word
+  text(word7, width*0.5, height*0.3); // draw the word
   }
 }
 
 
 if (aika >100){
 
-let word = random(message7); // select random word
-text(word, width*0.2, height*0.3); // draw the word
+let word8 = random(message7); // select random word
+text(word8, width*0.2, height*0.3); // draw the word
 
 
-if (word == "yö"){
-  let word2 = random(message6); // select random word
-  text(word2, width*0.5, height*0.3); // draw the word
+if (word8 == "yö"){
+  let word9 = random(message6); // select random word
+  text(word9, width*0.5, height*0.3); // draw the word
   }
 }
 
