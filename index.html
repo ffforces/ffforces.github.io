@@ -819,9 +819,14 @@ if(started) {
     document.getElementById("audio").play();
   //document.querySelector('#button').addEventListener('click', function (e) {
   //console.log(this.parentNode.classList.remove('container'&&'center'))
- return  center1.parentNode.removeChild(center1);
- return  container1.parentNode.removeChild(container1);
- return  button1.parentNode.removeChild(button1);
+ document.querySelector('#button').addEventListener('click', function (e) {
+          this.parentNode.classList.remove('container')
+          this.parentNode.classList.remove('center')
+        });
+
+//return  center1.parentNode.removeChild(center1);
+// return  container1.parentNode.removeChild(container1);
+ //return  button1.parentNode.removeChild(button1);
         } 
   //else {
     //        document.getElementById('button').style.visibility = 'visible';
