@@ -38,14 +38,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
     padding:0px;
     margin:0;
     }
-    button {
-    border:2px;
-    border-radius: 12px;
-    padding: 20px 50px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    }
+  
 
 
     </style>
@@ -258,7 +251,7 @@ function draw() {
 if(started){
 // laskurit
 //aika=(millis()*0.0025);
-  aika=(millis()*0.3);
+  aika=(millis()*0.01);
 aika=aika%1240;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
