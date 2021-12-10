@@ -30,7 +30,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
 .container { 
   height: 200px;
   position: relative;
-  border: 3px solid green; 
+  border:0px; 
 }
 
 .center {
@@ -41,6 +41,13 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+ .text{
+margin:0px;
+   padding:0px;
+   margin:0px;
+   border:none;
+     }
+    
 </style>
   </head>
   <body>
@@ -51,7 +58,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
     <button id="button" onclick="start()">Aloita</button>
     </div>
     </div>
-    
+    <div class="text">
 <script>
 
 var audio = document.getElementById("audio");
@@ -796,7 +803,7 @@ if(started) {
 
     </script>
 
-
+  </div>
 
 
   </body>
