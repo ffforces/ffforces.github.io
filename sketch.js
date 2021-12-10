@@ -94,7 +94,7 @@ fill(255,255,255);
 rect(0, 0, width, height);
 fill(0, 0, 0);
 
-if (aika <50){
+if (aika <50 && aika >1){
 
 let word1 = random(message1); // select random word
 text(word1, width*0.2, height*0.3); // draw the word
