@@ -38,19 +38,8 @@ margin:0px 0px;
    padding:0px 0px;
    border:none white;
      } 
-.container { 
-  height: 200px;
-  position: relative;
-  border:none white; 
-}
-
 .center {
-  margin: 0px 0px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+align:center;
 }
      
 .text{
@@ -64,15 +53,14 @@ margin:0px 0px;
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  
-  <div id="container" class="container"> 
-    <div id="center" class="center"> 
-    <button id="button" onclick="start()">Aloita</button>
+    <div class="center"> 
+    <button onclick="start()">Aloita</button>
     </div>
-    </div>
+    
     <div class="text">
 <script>
 
-
+ var audio = document.getElementById("audio");
 
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
@@ -274,15 +262,15 @@ noLoop();
 function draw() {
 if(started){
 // laskurit
-//aika=(millis()*0.0025);
-  aika=(millis()*0.01);
+aika=(millis()*0.0025);
+ // aika=(millis()*0.01);
 aika=aika%1240;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
 
 
 if (aika<870){
-frameRate(10);
+frameRate(1);
 
 
 } else {
@@ -819,11 +807,11 @@ var center1 = document.getElementById("center");
   
 
 function start(){
-  var audio = document.getElementById("audio");
+ 
    started = true;
     loop();
 if(started){
-           //document.getElementById('button').style.display= 'none';
+    document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
   }
 }
