@@ -810,12 +810,9 @@ function start(){
 if(started) {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
-  var button1 = document.getElementById("button");
-  var center1 = document.getElementById("center");
-  var container1 = document.getElementById("container");
- return  center1.parentNode.removeChild(center1);
- return  container1.parentNode.removeChild(container1);
- return  button1.parentNode.removeChild(button1);
+ document.querySelector('#button').addEventListener('click', function (e) {
+  console.log(this.parentNode.classList.remove('container'&&'center'))
+});
         } 
   //else {
     //        document.getElementById('button').style.visibility = 'visible';
