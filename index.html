@@ -74,7 +74,7 @@ margin:0px 0px;
 
 var audio = document.getElementById("audio");
 var container1 = document.getElementById("container");
-var button1 = document.getElementById("button");
+//var button = document.getElementById("button");
 var center1 = document.getElementById("center");
 
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
@@ -809,10 +809,10 @@ rect(0, 0, width, height);
 function start(){
    started = true;
     loop();
-  document.querySelector("button1").addEventListener("click", function () {
+  document.querySelector("button").addEventListener("click", function () {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
-  document.querySelector("button1").parentNode.removeChild(document.querySelector("button1"));
+  document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
   document.querySelector("center1").parentNode.removeChild(document.querySelector("center1"));
   document.querySelector("container1").parentNode.removeChild(document.querySelector("container1"));
         });                                                  
