@@ -6,15 +6,10 @@
     <title>Milka Luhtaniemi & Joonas Siren: Kesken kaikista paikoista </title>
         <meta name="description"
         content="Kesken kaikista paikoista
-
 Kineettinen runo on koostettu niin, että algoritmi ryhmittää runofragmentteja erilaisiin kokonaisuuksiin. Runon keskiössä on sydän, jonka voi ajatella olevan fysiologinen algoritmi: rytmittävä elin, joka lähettää keholle impulsseja, käskyjä ja komentoja. Teosta voi katsoa prosessina, hajoamisena ja muuntumien verkostona. Runon nimi viittaa ajatukseen, ettei sydämellä tai koodillakaan ole alkua, loppua tai etenemistä, vaan se on ja sen on oltava kesken.
-
 Runot: Milka Luhtaniemi
-
 Koodit ja äänisuunnittelu: Joonas Siren
-
 Konsepti: Milka Luhtaniemi ja Joonas Siren
-
 Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio Toinen laji oli Forum Box- galleriassa heinäkuussa 2021. ">
 
     <meta name="keywords"
@@ -69,8 +64,8 @@ margin:0px 0px;
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  
-  <div id="container1" class="container"> 
-    <div id="center1" class="center"> 
+  <div id="container" class="container"> 
+    <div id="center" class="center"> 
     <button id="button" onclick="start()">Aloita</button>
     </div>
     </div>
@@ -79,9 +74,7 @@ margin:0px 0px;
 
 var audio = document.getElementById("audio");
   
-  var button1 = document.getElementById("button");
-  var center1 = document.getElementById("center1");
-  var container1 = document.getElementById("container1");
+
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
 "minuun iskeytyy ääntä, pintoja",
@@ -283,14 +276,14 @@ function draw() {
 if(started){
 // laskurit
 //aika=(millis()*0.0025);
-  aika=(millis()*0.1);
+  aika=(millis()*0.01);
 aika=aika%1240;
 let aika2=(millis()*0.01);
 aika2=aika2%(width*0.1);
 
 
 if (aika<870){
-frameRate(10);
+frameRate(1);
 
 
 } else {
@@ -817,16 +810,12 @@ function start(){
 if(started) {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
-  //document.querySelector('#button').addEventListener('click', function (e) {
-  //console.log(this.parentNode.classList.remove('container'&&'center'))
- document.querySelector('#button').addEventListener('click', function (e) {
-          this.parentNode.classList.remove('container')
-          this.parentNode.classList.remove('center')
-        });
-
-//return  center1.parentNode.removeChild(center1);
-// return  container1.parentNode.removeChild(container1);
- //return  button1.parentNode.removeChild(button1);
+  var button1 = document.getElementById("button");
+  var center1 = document.getElementById("center");
+  var container1 = document.getElementById("container");
+ return  center1.parentNode.removeChild(center1);
+ return  container1.parentNode.removeChild(container1);
+ return  button1.parentNode.removeChild(button1);
         } 
   //else {
     //        document.getElementById('button').style.visibility = 'visible';
