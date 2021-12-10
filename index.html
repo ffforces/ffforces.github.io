@@ -38,12 +38,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
     padding:0px;
     margin:0px;
     }
-   container {
-  height: 200px;
-  position: relative;
-  border: 3px solid;
-}
-
+  
 vertical-center {
   margin: 0;
   position: absolute;
@@ -59,8 +54,8 @@ vertical-center {
   </head>
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
- <div class="container">
-   <div class="vertical-center"> <button id="button" onclick="start()">Aloita</button></div> </div>
+ 
+   <div class="vertical-center"> <button id="button" onclick="start()">Aloita</button></div>
 <script>
 
 var audio = document.getElementById("audio");
