@@ -69,8 +69,8 @@ margin:0px 0px;
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  
-  <div id="container" class="container"> 
-    <div id="center" class="center"> 
+  <div id="container1" class="container"> 
+    <div id="center1" class="center"> 
     <button id="button" onclick="start()">Aloita</button>
     </div>
     </div>
@@ -79,7 +79,9 @@ margin:0px 0px;
 
 var audio = document.getElementById("audio");
   
-
+  var button1 = document.getElementById("button");
+  var center1 = document.getElementById("center1");
+  var container1 = document.getElementById("container1");
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
 "minuun iskeytyy ääntä, pintoja",
@@ -815,9 +817,7 @@ function start(){
 if(started) {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
-  var button1 = document.getElementById("button");
-  var center1 = document.getElementById("center");
-  var container1 = document.getElementById("container");
+
  return  center1.parentNode.removeChild(center1);
  return  container1.parentNode.removeChild(container1);
  return  button1.parentNode.removeChild(button1);
