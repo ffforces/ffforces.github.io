@@ -54,7 +54,7 @@ margin:0px 0px;
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  
     <div align="center"> 
-    <button onclick="start()">Aloita</button>
+    <button id="button" onclick="start()">Aloita</button>
     </div>
     
     <div class="text">
@@ -789,20 +789,16 @@ rect(0, 0, width, height);
 
 }
 
-
-  
-  
-
 function start(){
- 
    started = true;
     loop();
-if(started){
-      document.getElementById('button').style.visibility = 'hidden';
+if(started) {
+            document.getElementById('button').style.visibility = 'hidden';
     document.getElementById("audio").play();
-  } else {  document.getElementById('button').style.visibility = 'visible';
-}
-}
+        } else {
+            document.getElementById('button').style.visibility = 'visible';
+        }
+  }
   
     </script>
 
