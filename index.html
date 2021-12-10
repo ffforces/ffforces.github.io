@@ -26,19 +26,13 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
 
 
     <meta charset="utf-8" />
-    <style>
-    .canvas {
-    display:block;
-    border:none;
-    padding:0px;
-    margin:0px;
-    }
- .container {
+   <style>
+.container { 
   height: 200px;
   position: relative;
-  border: 0px
+  border: 3px solid green; 
 }
-  
+
 .center {
   margin: 0;
   position: absolute;
@@ -47,13 +41,17 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
- </style>
-
+</style>
   </head>
   <body>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2021/11/keskenkaikistapaikoista.ogg" loop="loop"></audio>
  
-  <div class="container"> <div class="center"> <button id="button" onclick="start()">Aloita</button></div></div>
+  <div class="container"> 
+    <div class="center"> 
+    <button id="button" onclick="start()">Aloita</button>
+    </div>
+    </div>
+    
 <script>
 
 var audio = document.getElementById("audio");
