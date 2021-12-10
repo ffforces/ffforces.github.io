@@ -817,8 +817,12 @@ function start(){
 if(started) {
            //document.getElementById('button').style.display= 'none';
     document.getElementById("audio").play();
-  document.querySelector('#button').addEventListener('click', function (e) {
-  console.log(this.parentNode.classList.remove('container'&&'center'))
+  //document.querySelector('#button').addEventListener('click', function (e) {
+  //console.log(this.parentNode.classList.remove('container'&&'center'))
+      container1.parentNode.removeChild(container1);
+ center1.parentNode.removeChild(center1); 
+button.parentNode.removeChild(button);
+
 });
 
         } 
