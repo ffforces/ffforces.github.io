@@ -811,7 +811,9 @@ function start(){
 if(started) {
             //document.getElementById('button').style.visibility = 'hidden';
   document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
-    document.getElementById("audio").play();
+  document.querySelector("center").parentNode.removeChild(document.querySelector("center"));
+  document.querySelector("container").parentNode.removeChild(document.querySelector("container"));
+      document.getElementById("audio").play();
         } else {
             document.getElementById('button').style.visibility = 'visible';
         }
