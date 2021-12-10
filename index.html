@@ -23,6 +23,7 @@ Runo pohjautuu tekijöiden kehittämään metodiin, jonka ensimmäinen iteraatio
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
 
 
     <meta charset="utf-8" />
@@ -77,6 +78,10 @@ margin:0px 0px;
 <script>
 
 var audio = document.getElementById("audio");
+  var button = document.getElementById("button");
+  var center = document.getElementById("center");
+  var container = document.getElementById("container");
+
 let message1 = ["ennen kuin ehdin kysyä, minua on kysytty",
 "menen tyhjään jotta odottaminen alkaisi tuntua joltain",
 "minuun iskeytyy ääntä, pintoja",
@@ -810,9 +815,9 @@ function start(){
     loop();
 if(started) {
             //document.getElementById('button').style.visibility = 'hidden';
-  document.querySelector("button").parentNode.removeChild(document.querySelector("button"));
-  document.querySelector("center").parentNode.removeChild(document.querySelector("center"));
-  document.querySelector("container").parentNode.removeChild(document.querySelector("container"));
+  center.parentNode.removeChild(center);
+  button.parentNode.removeChild(button);
+  container.parentNode.removeChild(container);
       document.getElementById("audio").play();
         } else {
             document.getElementById('button').style.visibility = 'visible';
