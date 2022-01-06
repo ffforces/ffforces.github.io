@@ -91,7 +91,7 @@ function animate( ) {
 
            requestAnimationFrame( animate );
 
-       }, 1000 / 60 );
+       }, 1000 / 30 );
 
     yRotation += Math.sin(Math.abs(Math.sin(zz)*0.0997));
     xRotation += Math.sin(Math.sin(xx)*0.0577);
