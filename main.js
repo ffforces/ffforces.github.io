@@ -1,7 +1,7 @@
 
 
-  import * as THREE from './three.module.js'
-  import {GLTFLoader} from './GLTFLoader.js'
+  import * as THREE from 'https://cdn.skypack.dev/three'
+  import {GLTFLoader} from 'https://github.com/mrdoob/three.js/blob/dev/examples/jsm/loaders/GLTFLoader.js'
     var audio = document.getElementById("audio");
     var started=false;
   const canvas = document.querySelector('.webgl')
