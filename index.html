@@ -22,7 +22,7 @@
   </head>
   <body>
 
-<div id="webgl"></div>
+<canvas class="webgl"></canvas>
   <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2022/01/forces-inertia-04-chaosmosis-verjan22.mp3" loop="loop"></audio>
 
 
@@ -39,8 +39,8 @@
   import {GLTFLoader} from './GLTFLoader.js'
     var audio = document.getElementById("audio");
     var started=false;
-//  const canvas = document.querySelector('.webgl')
-const canvas = document.getElementById( 'webgl' );
+  const canvas = document.querySelector('.webgl')
+//const canvas = document.getElementById( 'webgl' );
   
   const scene = new THREE.Scene();
 
@@ -49,8 +49,9 @@ const canvas = document.getElementById( 'webgl' );
 
   const renderer = new THREE.WebGLRenderer( { antialias: false, canvas:canvas } );
   renderer.setSize( window.innerWidth, window.innerHeight );
-  canvas.appendChild( renderer.domElement );
+ // canvas.appendChild( renderer.domElement );
 
+  document.body.appendChild( renderer.domElement );
 
 
   renderer.setClearColor( 0x000000, 1 );
