@@ -4,8 +4,9 @@
   import {GLTFLoader} from 'https://github.com/mrdoob/three.js/blob/dev/examples/jsm/loaders/GLTFLoader.js'
     var audio = document.getElementById("audio");
     var started=false;
-  const canvas = document.querySelector('.webgl')
-
+  //const canvas = document.querySelector('.webgl')
+const canvas = document.getElementById( 'webgl' );
+  
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1000 );
