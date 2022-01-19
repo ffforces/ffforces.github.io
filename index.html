@@ -23,7 +23,7 @@
   <body>
 
 <canvas class="webgl"></canvas>
-  <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2022/01/forces-inertia-04-chaosmosis-verjan22.mp3" loop="loop"></audio>
+  <audio id="audio" src="https://joonassiren.fi/wp-content/uploads/2022/01/forces-inertia-04-chaosmosis-verjan22-variable-mediumquality.mp3" loop="loop"></audio>
 
 
 
@@ -35,198 +35,143 @@
 <script type="module">
 //<canvas class="webgl"></canvas>	  
 
-  import * as THREE from './three.module.js'
-  import {GLTFLoader} from './GLTFLoader.js'
-    var audio = document.getElementById("audio");
-    var started=false;
-  const canvas = document.querySelector('.webgl')
-//const canvas = document.getElementById( 'webgl' );
-  
-  const scene = new THREE.Scene();
+import * as THREE from './three.module.js'
+import {GLTFLoader} from './GLTFLoader.js'
+import { DRACOLoader } from './DRACOLoader.js'
 
-  const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1000 );
-  camera.position.set( 0, 2, 8 );
-
-  const renderer = new THREE.WebGLRenderer( { antialias: false, canvas:canvas } );
-  renderer.setSize( window.innerWidth, window.innerHeight );
- // canvas.appendChild( renderer.domElement );
-
-  document.body.appendChild( renderer.domElement );
+let c, size; // model center and size
+let t = 0;
+let dx;
+let zz=0;
+let xx=0;
+let yRotation =  0;
+let xRotation =  0;
+let xPosition = -1.2;
+let zPosition =  5.1;
+let yPosition =  2;
+let limit;
 
 
-  renderer.setClearColor( 0x000000, 1 );
-
-  //const controls = new THREE.OrbitControls( camera, renderer.domElement );
-  //const gridHelper = new THREE.GridHelper( 10, 10 );
-  //scene.add( gridHelper );
-
-  const lightA = new THREE.AmbientLight( 0xFFFFFF ); // soft white light
-  scene.add( lightA );
-
-  const lightP = new THREE.PointLight( 0xddff00, 1  );
-  lightP.position.set( -1, 3, 5 );
-  scene.add( lightP );
-
-  // --- data input ---
-  let yRotation =  0;
-  let xRotation =  0;
-  let xPosition = -1.2;
-  let zPosition =  3.5;
-  // -----         -----
-
-  const loader = new GLTFLoader();
+const canvas = document.querySelector('.webgl')
 
 
-  //loader.load('scene.glb', process );
-loader.load('https://dl.dropbox.com/s/zt1jzov3antdvfh/scene.glb', process );
-//https://dl.dropbox.com/s/8y4mjxww03t7kf0/
-//https://dl.dropbox.com/s/zt1jzov3antdvfh/scene.glb
+const renderer = new THREE.WebGLRenderer( { antialias: false,  canvas:canvas, powerPreference: "high-performance" } );
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.gammaFactor = 2.2;
+renderer.outputEncoding = THREE.sRGBEncoding;
+document.body.appendChild( renderer.domElement );
+const scene = new THREE.Scene();
+scene.background = new THREE.Color( 0x000000 );
+			//scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+
+			//const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 100 );
+			//camera.position.set( 5, 2, 8 );
+
+const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1000 );
+camera.position.set( 0, 2, 8 );
+const lightA = new THREE.AmbientLight(0x404040, 0.1); // soft white light
+scene.add( lightA );
+
+const lightP = new THREE.PointLight( 0xddff00, 1);
+lightP.position.set( -1, 3, 5);
+scene.add( lightP );
+
+//
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath( './draco/gltf/' );
+const loader = new GLTFLoader();
+loader.setDRACOLoader( dracoLoader );
+let model = new THREE.Object3D();
+let model2 = new THREE.Object3D();
+//loader.load('https://dl.dropbox.com/s/zt1jzov3antdvfh/scene.glb', process );
+loader.load( 'https://dl.dropbox.com/s/rsegppk3qfoyne6/laiva-compressed-18-01-22-centered.glb', process);
+//https://www.dropbox.com/s/rsegppk3qfoyne6/laiva-compressed-18-01-22-centered.glb?dl=0
+//https://www.dropbox.com/s/mhh5myzsw3jxwhy/lehmassaaranhylky2.glb?dl=0
+loader.load('https://dl.dropbox.com/s/mhh5myzsw3jxwhy/lehmassaaranhylky2.glb', process2);
 
 
-  let model = new THREE.Object3D( );
-  let c, size; // model center and size
 
-  let t = 0;
-  let x0 = xPosition;
-  let dx;
+window.onresize = function () {
+camera.aspect = window.innerWidth / window.innerHeight;
+camera.updateProjectionMatrix();
+renderer.setSize( window.innerWidth, window.innerHeight );
+};
 
-
-  let zz=0;
-  let xx=0;
-
-//var button=document.getElementById('button')
 
 document.getElementById('button').addEventListener("click", animation);
-//button.onclick = function animation( ) {
 function animation( ) {
 animate();
-//document.getElementById('button').style.display = 'none';
-//document.getElementById("audio").play();
 }
 
 
 
-function animate( ) {
+///////////////////
 
-    //var x = document.getElementById("button");
+function animate() {
 
-
-    //requestAnimationFrame( animate );
-
-    zz += 0.00113;
-    //zz=zz*0.1;
-    zz%7.00113;
-
-    xx += 0.00127;
-    //zz=zz*0.1;
-    xx%9.00127;
+zz += 0.01;
+zz%7;
+limit += 0.001;
+limit%4;
+xx += 0.02;
+xx%limit;
 
 
-
-
-    setTimeout( function() {
-
-           requestAnimationFrame( animate );
-
+setTimeout( function() {
+         requestAnimationFrame( animate );
        }, 1000 / 60 );
 
-    yRotation += Math.sin(Math.abs(Math.sin(zz)*0.0997));
-    xRotation += Math.sin(Math.sin(xx)*0.0577);
-    //t += 0.001;
-    t=1;
-    dx = Math.sin( t );
-    xPosition = x0 + dx;
-
-    model.rotation.y = yRotation;
-    model.rotation.x = xRotation;
-    model.position.x = xPosition;
-    model.position.z = zPosition;
-
-
-    renderer.render( scene, camera );
+yRotation += Math.sin(Math.abs(Math.sin(zz)*0.0997));
+model.rotation.y = -10+(yRotation*0.01);
+model.position.x = xPosition;
+model.position.y = yPosition;
+model.position.z=5;
+camera.position.z=8+(Math.sin(xx))
+model2.rotation.y = -10+(yRotation*0.1);
+model2.position.x = xPosition-0.1;
+model2.position.y = yPosition-0.1;
+model2.position.z=5;
+renderer.render( scene, camera );
+}
 
 
-
-    }
-
+/////////////
 
 
+function process(glb) {
+model=glb.scene;
+const material = new THREE.MeshPhysicalMaterial( {metalness: 1, roughness: 0.1, transmission: 0.9, transparent: true, opacity:1	} );
+model.add(material);
+model.scale.set( 1, 1, 1 );
+scene.add( model );
+}
 
+function process2(glb2) {
+model2=glb2.scene;
+const material2= new THREE.MeshPhysicalMaterial( {metalness: 1, roughness: 0.1, transmission: 0.9, transparent: true, opacity:1	} );
+model2.add(material2);
+model2.scale.set( 1, 1, 1 );
+scene.add(model2);
 
+}
 
-
-
-    function process( glb ) {
-
-    //  document.getElementById(button).style.display = 'none';
-      //  document.getElementById("audio").play();
-    const box = new THREE.Box3( ).setFromObject( glb.scene );
-
-    const material = new THREE.MeshPhysicalMaterial( {	metalness: 0, roughness: 0.1, transmission: 0.9, transparent: true, opacity:0			} );
-
-    //box.material = material;
-    //box.material.opacity = 1 + Math.sin(new Date().getTime() * .0025);
-    //box.material.opacity = 0;
-
-    //const mesh = new THREE.Mesh(x100, new THREE.MeshLambertMaterial() );
-
-    //scene.add( mesh );
-
-  // uus testi:
-
-    //var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-
-    //var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-
-    //var cube = new THREE.Mesh( geometry, material );
-
-
-
-    const boxHelper = new THREE.Box3Helper( box, 0x000000 );
-      scene.add( boxHelper );
-
-    c = box.getCenter( new THREE.Vector3( ) );
-    size = box.getSize( new THREE.Vector3( ) );
-
-    glb.scene.position.set( -c.x, size.y / 2 - c.y, -c.z );
-
-    model.add(material)
-    model.add( glb.scene );
-
-    scene.add( model );
-
-    }
 </script>
 
   <script>
-
-
-
-
-
-
-
   function myFunction() {
-    started=true;
-    if(started) {
-              document.getElementById('button').style.display = 'none';
-      document.getElementById("audio").play();
-
-          }
+started=true;
+if(started) {
+document.getElementById('button').style.display = 'none';
+document.getElementById("audio").play();
+ }
 
 }
 
 
 
 
-
-
-
-
-
-
-
-		</script>
+</script>
 
 
 
