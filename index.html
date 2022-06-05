@@ -55,7 +55,7 @@ let limit;
 const canvas = document.querySelector('.webgl')
 
 
-const renderer = new THREE.WebGLRenderer( { antialias: false,  canvas:canvas, powerPreference: "high-performance" } );
+const renderer = new THREE.WebGLRenderer( { antialias: false,  canvas:canvas, powerPreference: "default" } );
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 //renderer.gammaFactor = 2.2;
