@@ -122,10 +122,10 @@ function animate() {
 zz += 0.01;
 zz%7;
 
-limit2 += 0.001;
-limit2 % 1;	
-hh+= 0.01;
-hh%limit2;
+//limit2 += 0.001;
+//limit2 % 1;	
+//hh+= 0.01;
+//hh%limit2;
 	
 	
 
@@ -147,7 +147,7 @@ xRotation += Math.sin(Math.abs(Math.sin(zz)*0.0433));
 	
 model.rotation.y = -10+(yRotation*0.01);
 // tähän testi	
-model.rotation.x = -10+(xRotation*hh);
+model.rotation.x = -10+(xRotation*0.2);
 	
 model.position.x = xPosition;
 model.position.y = yPosition;
