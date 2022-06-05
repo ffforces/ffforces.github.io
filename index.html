@@ -52,8 +52,9 @@ let xRotation =  0;
 let xPosition = -1.2;
 let zPosition =  5.1;
 let yPosition =  2;
+let hh;	
 let limit;
-
+let limit2;
 
 const canvas = document.querySelector('.webgl')
 
@@ -119,8 +120,14 @@ animate();
 function animate() {
 
 zz += 0.01;
-	
 zz%7;
+
+limit2 += 0.001;
+limit2 % 1;	
+hh+= 0.01;
+hh%limit2;
+	
+	
 
 limit += 0.001;
 limit%4;
@@ -140,7 +147,7 @@ xRotation += Math.sin(Math.abs(Math.sin(zz)*0.0433));
 	
 model.rotation.y = -10+(yRotation*0.01);
 // tähän testi	
-model.rotation.x = -10+(xRotation*0.5);
+model.rotation.x = -10+(xRotation*hh);
 	
 model.position.x = xPosition;
 model.position.y = yPosition;
