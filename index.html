@@ -123,12 +123,25 @@ setTimeout( function() {
        }, 1000 / 60 );
 
 yRotation += Math.sin(Math.abs(Math.sin(zz)*0.0997));
+	
+//tähän testi	
+
+xRotation += Math.sin(Math.abs(Math.sin(zz)*0.0433));	
+	
 model.rotation.y = -10+(yRotation*0.01);
+// tähän testi	
+model.rotation.x = -10+(xRotation*0.001);
+	
 model.position.x = xPosition;
 model.position.y = yPosition;
 model.position.z=5;
 camera.position.z=8+(Math.sin(xx))
 model2.rotation.y = -10+(yRotation*0.1);
+
+//tähän testi
+
+model2.rotation.x = -10+(xRotation*0.05);	
+
 model2.position.x = xPosition-0.1;
 model2.position.y = yPosition-0.1;
 model2.position.z=5;
