@@ -86,13 +86,16 @@ let model = new THREE.Object3D();
 let model2 = new THREE.Object3D();
 //loader.load('https://dl.dropbox.com/s/zt1jzov3antdvfh/scene.glb', process );
 //loader.load( 'https://dl.dropbox.com/s/rsegppk3qfoyne6/laiva-compressed-18-01-22-centered.glb', process);
-loader.load( 'https://github.com/ffforces/ffforces.github.io/blob/main/laiva-compressed-18-01-22-centered.glb', process);
-
+//loader.load( 'https://github.com/ffforces/ffforces.github.io/blob/main/laiva-compressed-18-01-22-centered.glb', process);
+loader.load('laiva-compressed-18-01-22-centered.glb', process);
+	
 //https://www.dropbox.com/s/rsegppk3qfoyne6/laiva-compressed-18-01-22-centered.glb?dl=0
 //https://www.dropbox.com/s/mhh5myzsw3jxwhy/lehmassaaranhylky2.glb?dl=0
-//loader.load('https://dl.dropbox.com/s/mhh5myzsw3jxwhy/lehmassaaranhylky2.glb', process2);
-loader.load('https://github.com/ffforces/ffforces.github.io/blob/main/lehmassaaranhylky2.glb', process2);
 
+	
+//loader.load('https://dl.dropbox.com/s/mhh5myzsw3jxwhy/lehmassaaranhylky2.glb', process2);
+//loader.load('https://github.com/ffforces/ffforces.github.io/blob/main/lehmassaaranhylky2.glb', process2);
+loader.load('lehmassaaranhylky2.glb', process2);
 
 window.onresize = function () {
 camera.aspect = window.innerWidth / window.innerHeight;
