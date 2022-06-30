@@ -77,7 +77,7 @@ scene.background = new THREE.Color( 0x000000 );
 const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1000 );
 controls = new OrbitControls( camera, renderer.domElement );
 controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
-controls.dampingFactor = 0.5;
+controls.dampingFactor = 0.9;
 //controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
 //controls.dampingFactor = 0.05;
 
